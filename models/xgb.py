@@ -33,15 +33,19 @@ if __name__ == '__main__':
                   'learning_rate': [0.1],
                   'n_estimators': [1000],
                   'early_stopping_rounds': [50],
-                  'max_depth': [20*(i+1) for i in range(5)],
-                  'min_child_weight': [0.1, 0.5, 1, 2, 3, 5],
-                  'gamma': [0, 0.1, 0.5, 1, 2, 3, 5],
-                  'alpha': [0, 0.1, 0.5, 1, 2, 3, 5],
-                  'subsample': np.linspace(0.1, 1, 10),
-                  'colsample_bytree': np.linspace(0.1, 1, 10),
+                  'max_depth': [100],
+                  'min_child_weight': [0.5, 1, 3],
+                  'gamma': [0, 0.5, 1, 3],
+                  'alpha': [0, 0.5, 1, 3],
+                  'subsample': [0.3, 0.5, 1],
+                  'colsample_bytree': [0.3, 0.5, 1],
+                  'colsample_bylevel': [0.5, 1],
+                  'colsample_bynode': [0.5, 1],
+                  # 'subsample': np.linspace(0.1, 1, 10),
+                  # 'colsample_bytree': np.linspace(0.1, 1, 10),
                   # 'colsample_bylevel': np.linspace(0.1, 1, 10),
                   # 'colsample_bynode': np.linspace(0.1, 1, 10),
-                  'lambda': [0, 0.1, 0.5, 1, 2, 3, 5]}
+                  'lambda': [0, 0.5, 1, 3]}
     min_score = 100
     min_params = None
 
